@@ -22,6 +22,8 @@
     <Compile Include="Sources\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sources\PWRController.cs" />
+    <Compile Include="Sources\UserConfiguration.cs" />
+    <Compile Include="Sources\UserConfigurationStore.cs" />
     <Compile Include="Stm32.GpioController.Extensions.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -32,6 +34,11 @@
     </Reference>
     <Reference Include="nanoFramework.Hardware.Stm32, Version=1.1.0.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Hardware.Stm32.1.1.0\lib\nanoFramework.Hardware.Stm32.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="nanoFramework.Json, Version=1.3.1.2, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\nanoFramework.Json.1.3.1\lib\nanoFramework.Json.dll</HintPath>
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
@@ -52,6 +59,16 @@
     </Reference>
     <Reference Include="Windows.Devices.I2c, Version=1.2.0.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Windows.Devices.I2c.1.2.0\lib\Windows.Devices.I2c.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Windows.Storage, Version=1.1.0.2, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Windows.Storage.1.1.0\lib\Windows.Storage.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Windows.Storage.Streams, Version=1.7.0.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Windows.Storage.Streams.1.7.0\lib\Windows.Storage.Streams.dll</HintPath>
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
