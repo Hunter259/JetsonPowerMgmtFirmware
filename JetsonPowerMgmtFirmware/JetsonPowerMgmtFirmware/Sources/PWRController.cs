@@ -1,4 +1,4 @@
-﻿namespace JetsonPowerMgmtFirmware.PWRController
+﻿namespace JetsonPowerMgmtFirmware.PowerControl
 {
     using System;
     using System.Collections;
