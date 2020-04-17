@@ -32,7 +32,7 @@
         /// <summary>
         /// Clears configuration file and replaces with default
         /// </summary>
-        /// <returns>Returns true if successful, false otherwise</returns>
+        /// <returns>True if successful, false otherwise</returns>
         public bool ClearConfig()
         {
             return this.WriteConfig(
