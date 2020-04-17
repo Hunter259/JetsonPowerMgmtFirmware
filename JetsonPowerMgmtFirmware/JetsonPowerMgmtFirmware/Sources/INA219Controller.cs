@@ -42,6 +42,27 @@
     }
 
     /// <summary>
+    /// Container for returning all useful values from INA219
+    /// </summary>
+    public struct INACompleteValues
+    {
+        /// <summary>
+        /// Holds current at this instance
+        /// </summary>
+        public float Current;
+
+        /// <summary>
+        /// Holds voltage at this instance
+        /// </summary>
+        public float Voltage;
+
+        /// <summary>
+        /// Holds power, in watts, at this instance
+        /// </summary>
+        public float Power;
+    }
+
+    /// <summary>
     /// Controller class to configure and read data from all INA219 devices connected to an I2C bus
     /// </summary>
     public class INA219Controller
@@ -134,6 +155,37 @@
                 writeBuffer = BitConverter.GetBytes(calibrationReg);
                 INADevice.Write(writeBuffer);
             }
+        }
+
+        /// <summary>
+        /// Returns an <see cref="ArrayList"/> of all values from every INA219
+        /// </summary>
+        /// <returns><see cref="ArrayList"/> of <see cref="INACompleteValues"/> for every INA219</returns>
+        public ArrayList GetAllValues()
+        {
+            ArrayList allINAs = new ArrayList();
+
+            for (int i = 0; i < this.INADevices.Count; i++)
+            {
+                allINAs.Add(this.GetValues(i));
+            }
+
+            return allINAs;
+        }
+
+        /// <summary>
+        /// Returns all values for specified INA219
+        /// </summary>
+        /// <param name="i">INA to receive values for</param>
+        /// <returns>Current, Voltage, and Power as a <see cref="INACompleteValues"/></returns>
+        public INACompleteValues GetValues(int i)
+        {
+            INACompleteValues valuesToReturn;
+            valuesToReturn.Current = this.GetCurrent(i);
+            valuesToReturn.Voltage = this.GetVoltage(i);
+            valuesToReturn.Power = valuesToReturn.Current * valuesToReturn.Voltage;
+
+            return valuesToReturn;
         }
 
         /// <summary>
