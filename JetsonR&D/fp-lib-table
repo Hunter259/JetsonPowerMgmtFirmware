@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name EMZS250ARA102MJA0G)(type Legacy)(uri "${KIPRJMOD}/Needed Models/EMZS250ARA102MJA0G.mod")(options "")(descr ""))
+  (lib (name "Needed Models")(type KiCad)(uri "${KIPRJMOD}/Needed Models.pretty")(options "")(descr ""))
+)

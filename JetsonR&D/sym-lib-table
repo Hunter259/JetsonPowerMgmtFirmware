@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name EMZS250ARA102MJA0G)(type Legacy)(uri "${KIPRJMOD}/Needed Models/EMZS250ARA102MJA0G.lib")(options "")(descr ""))
+  (lib (name 691311500102)(type Legacy)(uri "${KIPRJMOD}/Needed Models/691311500102.lib")(options "")(descr ""))
+  (lib (name 1720576)(type Legacy)(uri "${KIPRJMOD}/Needed Models/1720576.lib")(options "")(descr ""))
+)
